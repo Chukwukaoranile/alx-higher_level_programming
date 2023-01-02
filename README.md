@@ -1,1 +1,1 @@
-This repo contains folders that demonstrates ALX Higher Level Programming 
+This repo contains folders that demonstrates ALX Higher Level Programming
