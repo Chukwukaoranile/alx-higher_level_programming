@@ -6,7 +6,6 @@ if number < 0:
     n = -n
 else:
     n = number % 10
-
 if n > 5:
     str = "and is greater than 5"
 elif n == 0:
