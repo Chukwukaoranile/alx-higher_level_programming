@@ -1,15 +1,11 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
-    ars = 0
-    itel = 0
-    while ars < x:
+barr = 0
+    for i in range(x):
         try:
-            print("{:d}".format(my_list[ars]), end="")
-            itel += 1
+            print("{}".format(my_list[i]), end="")
+            barr += 1
         except IndexError:
-            raise
-        except:
-            pass
-        ars += 1
+            break
     print("")
-    return itel
+    return (barr)
