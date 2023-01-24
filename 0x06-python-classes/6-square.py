@@ -1,42 +1,39 @@
 #!/usr/bin/python3
-"""Class Square"""
+""" Define an object name Square.
+"""
 
 
 class Square:
-    """Defines a square
-    Private instance attribute"""
-    def __init__(self, size=0):
-        """Initilizes the data"""
-        self.__size = size
-
-    @property
-    def size(self):
-        """Retrieves size."""
-        return self.__size
-
-    @size.setter
-    def size(self, value):
-        """Sets size."""
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        if value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
+    """ Object Square [class]
+    """
+    def __init__(self, size=0, position=(0, 0)):
+        """ Method - Initialize.
+        Args:
+            self (class): This class
+            size (int): Size of the square
+        """
+        self.size = size
+        self.position = position
 
     def area(self):
-        """Returns area of the square"""
+        """ Method - Returns the current square area.
+        Args:
+            self (class): This class
+        """
+        return (self.__size ** 2)
 
-        return self.__size ** 2
-
-
-def my_print(self):
-    """Prints to the standard output"""
-    if self.__size == 0:
-        print("")
-    else:
-        for i in range(0, self.__size):
-            for j in range(0, self.__size):
-                print("#", end="")
+    def my_print(self):
+        """ Method - prints in stdout the square with the character #.
+        Args:
+            self (class): This class
+        """
+        if self.__size:
+            for i in range(self.position[1]):
+                print()
+            for j in range(self.size):
+                print(" " * self.position[0], end="")
+                print("#" * self.size)
+        else:
             print()
 
     @property
@@ -53,8 +50,7 @@ def my_print(self):
 
     @size.setter
     def size(self, value):
-        """ Set - instance attribute size
-        """
+        """Set - instance attribute size"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
