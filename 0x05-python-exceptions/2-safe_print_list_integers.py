@@ -9,4 +9,3 @@ var = 0
             continue
     print("")
     return (var)
-Footer
