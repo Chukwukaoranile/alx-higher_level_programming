@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-'''Task 07 - 7. Integer validator'''
+'''File: 7-base_geometry - Task'''
 
 
 class BaseGeometry():
-    '''class BaseGeometry'''
+    '''Defing class BaseGeometry'''
 
     def area(self):
         '''A function that raises an Exception with the message area()'''
