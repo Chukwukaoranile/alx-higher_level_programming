@@ -28,6 +28,4 @@ def mysqlconnect():
     cursor.close()
     db_connection.close()
 
-
-if _name_ == '_main_':
-    mysqlconnect()
+mysqlconnect()
