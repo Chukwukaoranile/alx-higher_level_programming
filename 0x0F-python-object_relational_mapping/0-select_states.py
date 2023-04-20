@@ -7,20 +7,15 @@ def mysqlconnnect():
     """
     Connwct and querry the database through the code base
     """
-    try:
-        db_connection = MySQLdb.connect(host="localhost", port=3306,
-                                        user=argv[1], passwd=argv[2],
-                                        db=argv[3], charset="utf8")
-    except Exception:
-        print("can't connect to database")
-        return 0
-    cur = db_connection.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
-    query_rows = cur.fetchall()
-    for data_row in query_rows:
-        print(data_row)
-    cur.close()
-    db_connection.close()
+    if __name__ == '__main__':
 
-
-mysqlconnnect()
+    db = MySQLdb.connect(host="localhost", port=3306,
+                         user=sys.argv[1], passwd=sys.argv[2],
+                         db=sys.argv[3], charset="utf8")
+    cr = db.cursor()
+    cr.execute("SELECT * FROM states ORDER BY states.id")
+    res = cr.fetchall()
+    for rows in res:
+        print(rows)
+    cr.close()
+    db.close()
