@@ -1,13 +1,12 @@
 #!/usr/bin/python3
+
 """Wait, do you remember the previous task? Did you test """
 import MySQLdb
 from sys import argv
 
 
 def sqlConection():
-    """
-    Conecting and quering the database through code base
-    """
+    """ Conecting and quering the database through code base"""
     try:
         db_con = MySQLdb.connect(host="localhost", port=3306,
                                         user=argv[1], password=argv[2],
