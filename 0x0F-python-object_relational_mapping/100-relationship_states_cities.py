@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""A script that lists all City objects from the database hbtn_0e_101_usa"""
+"""Improving the files model_city.py and model_state.py,
+and save them as relationship_city.py and relationship_state.py"""
 if __name__ == "__main__":
 
     import sys
@@ -15,6 +16,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    for city in session.query(City).order_by(City.id).all():
-        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
+    new_city = City(name='San Francisco')
+    new = State(name='California')
+    new.cities.append(new_city)
+    session.add_all([new, new_city])
+    session.commit()
     session.close()
