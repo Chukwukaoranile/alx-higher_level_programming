@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Wait, do you remember the previous task? Did you test """
 import MySQLdb
 from sys import argv
