@@ -24,3 +24,6 @@ def sqlConection():
         print(row)
     cur.close()
     db_con.close()
+
+
+sqlConection()
