@@ -1,23 +1,29 @@
 #!/usr/bin/python3
-"""script that lists all cities from the database hbtn_0e_4_usa"""
+from sys import argv
 import MySQLdb
-import sys
 
 
-if __name__ == '__main__':
-
-    db_con = MySQLdb.connect(host="localhost", port=3306,
-                         user=sys.argv[1], passwd=sys.argv[2],
-                         db=sys.argv[3], charset="utf8")
-    cr = db_con.cursor()
-    myQuery = " ".join([
-        "SELECT cities.id, cities.name, states.name FROM cities",
-        "INNER JOIN states ON states.id = cities.state_id",
-        "ORDER BY cities.id"
-        ])
-    cr.execute(myQuery)
-    table = cr.fetchall()
-    for rows in table:
-        print(rows)
-    cr.close()
+def sqlConection():
+    """
+    Conecting and quering to database
+    """
+    try:
+        db_con = MySQLdb.connect(host="localhost", port=3306,
+                                        user=argv[1], password=argv[2],
+                                        db=argv[3], charset="utf8")
+    except Exception:
+        print("Can't connect to database")
+        return 0
+    cur = db_con.cursor()
+    sql = "SELECT c.id,c.name, s.name FROM cities AS c JOIN states AS s "
+    string = "WHERE c.state_id=s.id ORDER BY id ASC"
+    sqlc = sql + string
+    cur.execute(sqlc)
+    query_rows = cur.fetchall()
+    for row in query_rows:
+        print(row)
+    cur.close()
     db_con.close()
+
+
+sqlConection()
