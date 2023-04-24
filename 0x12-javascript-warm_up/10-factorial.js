@@ -1,8 +1,6 @@
 #!/usr/bin/node
-let number = parseInt(process.argv[2]);
-function fact (number) {
-	  if (number > 0) return (number * fact(number - 1));
-	    return (1);
+function factorial (number) {
+  return number === 0 || isNaN(number) ? 1 : number * factorial(number - 1);
 }
-if (isNaN(number)) number = 1;
-console.log(fact(number));
+
+console.log(factorial(Number(process.argv[2])));
