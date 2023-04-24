@@ -1,2 +1,0 @@
-chmod 777 *.js
-git add . && git commit -m "Javascript objects, Scopes, Closures" && git push
