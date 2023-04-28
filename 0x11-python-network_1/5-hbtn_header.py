@@ -10,5 +10,7 @@ A Python script that takes in a URL, sends a request to the URL and displays the
 if __name__ == "__main__":
     import sys
     import requests
-    r = requests.get(sys.argv[1])
-    print(r.headers.get('X-Request-Id'))
+    url = sys.argv[1]
+
+    r = requests.get(url)
+    print(r.headers.get("X-Request-Id"))
