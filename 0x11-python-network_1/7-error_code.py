@@ -10,4 +10,4 @@ if __name__ == "__main__":
     if igede.status_code >= 400:
         print(igede.text)
     else:
-        print("Error code" igede.status_code)
+        print("Error code", igede.status_code)
