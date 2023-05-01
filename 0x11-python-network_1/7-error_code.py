@@ -2,12 +2,12 @@
 """A Python script that takes in a URL, sends a request to the URL and displays the body of the response."""
 
 if __name__ == "__main__":
-    import requests
     from sys import argv
+    import requests
 
-    req = requests.get(argv[1])
+    igede = requests.get(argv[1])
 
-    if req.status_code >= 400:
-        print("Error code:", req.status_code)
+    if igede.status_code >= 400:
+        print(igede.text)
     else:
-        print(req.text)
+        print("Error code" igede.status_code)
