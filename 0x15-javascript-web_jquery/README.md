@@ -18,11 +18,11 @@ Read or watch:
 [API](https://oscarotero.com/jquery/)\
 [Introduction](https://jquery-tutorial.net/ajax/introduction/)\
 [GET & POST request](https://jquery-tutorial.net/ajax/the-get-and-post-methods/)\
-[JQuery Ajax Tutorial #1 - Using AJAX & API’s](https://www.youtube.com/watch?v=fEYx8dQr_cQ)\
+[![JQuery Ajax Tutorial #1 - Using AJAX & API’s](https://img.youtube.com/vi/fEYx8dQr_cQ/0.jpg)](https://www.youtube.com/watch?v=fEYx8dQr_cQ)\
 [What went wrong? Troubleshooting JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)\
 [JQuery](https://jquery.com/)\
 [JQuery API](https://api.jquery.com/)\
-[JQuery Ajax](https://learn.jquery.com/ajax/)\
+[JQuery Ajax](https://learn.jquery.com/ajax/)
 
 #### Learning Objectives
 At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/), without the help of Google:
